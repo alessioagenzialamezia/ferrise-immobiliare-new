@@ -85,7 +85,7 @@ export default function PropertyDetailPage({ propertyId, onNavigate }: PropertyD
   };
 
   const shareProperty = (platform: 'facebook' | 'whatsapp' | 'email') => {
-    const propertyUrl = `${window.location.origin}/property/${propertyId}`;
+    const propertyUrl = `${window.location.origin}#property-detail/${propertyId}`;
     const title = property?.title || '';
     const description = property?.description || '';
     const price = property?.price ? `€${property.price.toLocaleString()}` : '';

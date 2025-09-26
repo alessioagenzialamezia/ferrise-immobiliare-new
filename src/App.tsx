@@ -34,6 +34,24 @@ function App() {
   });
   const [currentPage, setCurrentPage] = useState('properties');
 
+    // Gestione hash routing per link diretti
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash.startsWith('property-detail/')) {
+      const id = hash.split('/')[1];
+      setSelectedPropertyId(id);
+      setCurrentView('property-detail');
+    } else if (hash.startsWith('blog-post/')) {
+      const id = hash.split('/')[1];
+      setSelectedBlogPostId(id);
+      setCurrentView('blog-post');
+    } else if (hash === 'properties') {
+      setCurrentView('properties');
+    } else if (hash === 'home') {
+      setCurrentView('home');
+    }
+  }, []);
+
   // Sistema di reindirizzamento per link condivisi
   useEffect(() => {
     const path = window.location.pathname;
@@ -62,12 +80,17 @@ function App() {
     setCurrentView('home');
   };
 
+  // Sostituisci la vecchia funzione handleNavigation con questa
   const handleNavigation = (view: string, id?: string) => {
     setCurrentView(view);
     if (view === 'property-detail' && id) {
       setSelectedPropertyId(id);
+      window.location.hash = `property-detail/${id}`;
     } else if (view === 'blog-post' && id) {
       setSelectedBlogPostId(id);
+      window.location.hash = `blog-post/${id}`;
+    } else {
+      window.location.hash = view;
     }
   };
 

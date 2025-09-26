@@ -66,7 +66,7 @@ export default function BlogPostPage({ postId, onNavigate }: BlogPostPageProps) 
     });
   };
 
-  const shareUrl = window.location.href;
+  const shareUrl = `${window.location.origin}#blog-post/${postId}`;
   const shareTitle = post?.title || '';
 
   const shareLinks = {
