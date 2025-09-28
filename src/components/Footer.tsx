@@ -38,7 +38,7 @@ export default function Footer({ onNavigate, showAdminButton = true }: FooterPro
               >
                 <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-all duration-300 group-hover:scale-110">
                   <img 
-                    src="/face.webp" 
+                    src="/facebook.png" 
                     alt="Facebook" 
                     className="w-6 h-6 object-contain"
                   />
@@ -52,7 +52,7 @@ export default function Footer({ onNavigate, showAdminButton = true }: FooterPro
               >
                 <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 group-hover:scale-110">
                   <img 
-                    src="/insta.png" 
+                    src="/instagram.png" 
                     alt="Instagram" 
                     className="w-6 h-6 object-contain"
                   />

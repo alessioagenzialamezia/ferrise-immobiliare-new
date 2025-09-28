@@ -350,6 +350,7 @@ export default function BlogPostPage({ postId, onNavigate }: BlogPostPageProps) 
                 </a>
                 <a
                   href={shareLinks.email}
+                  target="_self"
                   className="flex items-center px-3 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm"
                 >
                   <Mail className="w-4 h-4 mr-2" />
