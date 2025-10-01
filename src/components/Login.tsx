@@ -49,7 +49,7 @@ export default function Login({ onLogin, onBackToHome }: LoginProps) {
           >
             <img 
               src="/logoalessio.png" 
-              alt="Ferris Immobiliare" 
+              alt="Ferrise Immobiliare" 
               className="h-12 w-auto mx-auto"
             />
           </button>

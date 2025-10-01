@@ -133,7 +133,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               <button onClick={() => onNavigate('home')} className="flex items-center">
                 <img 
                   src="/logoalessio.png" 
-                  alt="Ferris Immobiliare" 
+                  alt="Ferrise Immobiliare" 
                   className="h-10 w-auto hover:opacity-80 transition-opacity"
                 />
               </button>
@@ -334,7 +334,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 <div className="inline-flex items-center justify-center mb-6">
                   <img 
                     src="/Alessio.png" 
-                    alt="Alessio Ferrise - Ferris Immobiliare" 
+                    alt="Alessio Ferrise - Ferrise Immobiliare" 
                     className="w-20 h-20 rounded-full object-cover border-4 border-blue-500 shadow-lg hover:scale-105 transition-transform duration-300"
                   />
                 </div>

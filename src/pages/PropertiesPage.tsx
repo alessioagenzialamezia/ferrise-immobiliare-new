@@ -244,7 +244,7 @@ export default function PropertiesPage({ onNavigate }: PropertiesPageProps) {
               <button onClick={() => onNavigate('home')} className="flex items-center">
                 <img 
                   src="/logoalessio.png" 
-                  alt="Ferris Immobiliare" 
+                  alt="Ferrise Immobiliare" 
                   className="h-10 w-auto hover:opacity-80 transition-opacity"
                 />
               </button>
