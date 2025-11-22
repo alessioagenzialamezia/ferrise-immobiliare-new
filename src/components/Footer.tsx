@@ -17,7 +17,7 @@ export default function Footer({ onNavigate, showAdminButton = true }: FooterPro
           <div className="md:col-span-4">
             <div className="flex items-center mb-4">
               <img 
-                src="/logobiancoalessio.png" 
+                src="/logoconsimmbianco1.png" 
                 alt="Ferrise Immobiliare" 
                 className="h-12 w-auto"
               />
