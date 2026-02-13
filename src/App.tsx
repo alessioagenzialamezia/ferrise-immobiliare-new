@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Login from './components/Login';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
@@ -9,13 +9,14 @@ import BlogPostPage from './pages/BlogPostPage';
 import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
 import AgencyPage from './pages/AgencyPage';
+import SellPropertyPage from './pages/SellPropertyPage';
 import Properties from './components/Properties';
 import BlogPosts from './components/BlogPosts';
 import FAQs from './components/FAQs';
 import Analytics from './components/Analytics';
 
 function App() {
-  const [currentView, setCurrentView] = useState('home'); // 'home', 'properties', 'property-detail', 'blog', 'blog-post', 'faq', 'contact', 'agency', 'admin'
+  const [currentView, setCurrentView] = useState('home'); // 'home', 'properties', 'property-detail', 'blog', 'blog-post', 'faq', 'contact', 'agency', 'sell', 'admin'
   const [selectedPropertyId, setSelectedPropertyId] = useState<string | null>(null);
   const [selectedBlogPostId, setSelectedBlogPostId] = useState<string | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
@@ -34,7 +35,7 @@ function App() {
   });
   const [currentPage, setCurrentPage] = useState('properties');
 
-    // Gestione hash routing per link diretti
+  // Gestione hash routing per link diretti
   useEffect(() => {
     const hash = window.location.hash.replace('#', '');
     if (hash.startsWith('property-detail/')) {
@@ -49,6 +50,16 @@ function App() {
       setCurrentView('properties');
     } else if (hash === 'home') {
       setCurrentView('home');
+    } else if (hash === 'sell') {
+      setCurrentView('sell');
+    } else if (hash === 'blog') {
+      setCurrentView('blog');
+    } else if (hash === 'faq') {
+      setCurrentView('faq');
+    } else if (hash === 'contact') {
+      setCurrentView('contact');
+    } else if (hash === 'agency') {
+      setCurrentView('agency');
     }
   }, []);
 
@@ -56,7 +67,7 @@ function App() {
   useEffect(() => {
     const path = window.location.pathname;
     const urlParams = new URLSearchParams(window.location.search);
-    
+
     // Controlla tutti i possibili formati di link proprietà
     if (path.startsWith('/property/') || path.includes('property') || urlParams.has('property')) {
       console.log('🏠 Link proprietà rilevato, reindirizzo alla pagina proprietà');
@@ -69,7 +80,7 @@ function App() {
       window.history.replaceState({}, '', '/');
     }
   }, []);
-  
+
   const handleLogin = (success: boolean) => {
     setIsAuthenticated(success);
   };
@@ -80,7 +91,7 @@ function App() {
     setCurrentView('home');
   };
 
-  // Sostituisci la vecchia funzione handleNavigation con questa
+  // Navigazione con hash
   const handleNavigation = (view: string, id?: string) => {
     setCurrentView(view);
     if (view === 'property-detail' && id) {
@@ -114,6 +125,8 @@ function App() {
           return <ContactPage onNavigate={handleNavigation} />;
         case 'agency':
           return <AgencyPage onNavigate={handleNavigation} />;
+        case 'sell':
+          return <SellPropertyPage onNavigate={handleNavigation} />;
         default:
           return <HomePage onNavigate={handleNavigation} />;
       }
@@ -144,8 +157,8 @@ function App() {
   };
 
   return (
-    <Layout 
-      currentPage={currentPage} 
+    <Layout
+      currentPage={currentPage}
       onNavigate={setCurrentPage}
       onLogout={handleLogout}
       onBackToSite={() => setCurrentView('home')}
