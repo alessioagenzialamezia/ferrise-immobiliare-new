@@ -147,11 +147,11 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
                 <div className="px-5 py-4 flex items-center justify-between gap-4">
                   <div className="min-w-0">
                     <div className="text-sm font-extrabold text-gray-900">Dove siamo</div>
-                    <div className="text-sm text-gray-600">Via Piave 69, Lamezia Terme</div>
+                    <div className="text-sm text-gray-600">Via Trento 35, Lamezia Terme</div>
                   </div>
 
                   <a
-                    href="https://www.google.com/maps?q=Via+Piave+69,+88046+Lamezia+Terme+CZ"
+                    href="https://www.google.com/maps?q=Via+Trento+35,+88046+Lamezia+Terme+CZ"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-sm font-extrabold text-blue-600 hover:text-blue-700 transition-colors flex-shrink-0"
