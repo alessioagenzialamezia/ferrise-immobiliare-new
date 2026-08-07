@@ -34,7 +34,7 @@ export default function AgencyPage({ onNavigate }: AgencyPageProps) {
     {
       year: '2022',
       title: 'Nuova Sede',
-      description: 'Trasferimento nella nuova e attuale sede di Via Piave 69, più ampia e accogliente.',
+      description: 'Trasferimento nella nuova e attuale sede di Via Trento 35, più ampia e accogliente.',
       icon: MapPin,
     },
     {
@@ -238,7 +238,7 @@ export default function AgencyPage({ onNavigate }: AgencyPageProps) {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Indirizzo</h4>
-                    <p className="text-gray-700">Via Piave 69, 88046 Lamezia Terme (CZ)</p>
+                    <p className="text-gray-700">Via Trento 35, 88046 Lamezia Terme (CZ)</p>
                     <p className="text-sm text-gray-500 mt-1">Facilmente raggiungibile dal centro città</p>
                   </div>
                 </div>
@@ -305,7 +305,7 @@ export default function AgencyPage({ onNavigate }: AgencyPageProps) {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Mappa Ferrise Immobiliare - Via Piave 69, Lamezia Terme"
+                  title="Mappa Ferrise Immobiliare - Via Trento 35, Lamezia Terme"
                   className="rounded-2xl"
                 />
               </div>
